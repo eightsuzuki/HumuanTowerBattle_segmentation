@@ -1,0 +1,8 @@
+1. Unity Hub Downlod
+2. Unity で tower battel のフォルダーの中の Unity フォルダーを開く
+3. ターミナルで seg.py を実行
+
+環境
+python3 get-pip.py 
+pip install opencv-python
+pip install mediapipe
