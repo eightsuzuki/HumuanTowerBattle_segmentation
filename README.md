@@ -1,2 +1,34 @@
-# HumuanTowerBattle segmentation U2-Net
-Using U2-Net, we generate a segmentation mask to separate the character from the background and remove the backgrounds from images of humans. This is a game inspired by the animal tower battle created in our laboratory. Instead of animals, the player's character is depicted falling down.
+# 人間タワーバトル
+早稲田大学主催の小学生向け科学教室ユニラボにおける展示開発物です。動物タワーバトルにおいて、落ちてくる動物の代わりにカメラで撮った人が切り抜かれ落ちてくるセマンティックセグメンテーションの技術紹介をする科学教室の展示です。
+
+任意の写真(png)を追加すると落ちてきます．スペースキーを押すとパソコンのカメラで写真がとれて、その写真を切り抜いて落とします。
+土台から写真が落ちてしまったらゲームオーバーです．
+
+<img src=https://github.com/murata-lab/unilab-tower-battle/blob/master/demo.JPG width=50%>
+
+## 使い方
+#### 1. unityをインストール
+Unityをインストールする
+
+#### 2. レポジトリをクローン
+```
+git clone https://github.com/murata-lab/unilab-tower-buttle.git
+```
+をして，unityで開く．
+
+#### 3. タワーを作る
+1. ProjectのAssets/Scenes/Mainを選択し，再生ボタンを押す（画面の大きさは再生ボタン下のバーで変えられます）
+1. Assets/Resources以下にpng画像を追加すると，写真が落ちてきてタワーに追加されます．
+1. 再生ボタンを押すと終了します．
+
+## 細かい仕様
+- 高く積み上がったら画面からはみ出さないようにカメラが動いていきます
+- 再生ボタンが押された段階でAssets/Resources以下に画像があれば削除されます
+- unityが選択された状態でないと画像が落ちてこない場合があるので，その時は一回unityを選択してください
+
+
+## 開発期間 
+2023/4-2024/7
+## 使用技術 
+python、Unity、U2Net
+
